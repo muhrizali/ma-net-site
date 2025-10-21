@@ -1,0 +1,39 @@
+---
+import Logo from "./Logo.astro";
+import Button from "./Button.astro";
+type NavItem = {
+    link: string;
+    label: string;
+};
+
+type NavLinks = Array<NavItem>;
+
+const navLinks: NavLinks = [
+    { link: "/", label: "HOME" },
+    { link: "/blog", label: "BLOG" },
+    { link: "/projects", label: "PROJECTS" },
+    { link: "/books", label: "BOOKS" },
+    { link: "/about", label: "ABOUT" },
+];
+---
+
+<header class="header">
+    <nav class="navigation">
+        <Logo />
+        <ul class="navigation-links">
+            {
+                navLinks.map((item) => (
+                    <li>
+                        <a class="btn-primary-ghost" href={item.link}>
+                            {item.label}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+        <div class="grow"></div>
+        <!-- <ul> -->
+        <input class="input-base" placeholder="SEARCH" type="text" />
+    </nav>
+    <!-- </ul> -->
+</header>

@@ -1,0 +1,22 @@
+---
+type Props = {
+    variant: "base" | "base-ghost" | "primary" | "primary-ghost" | "secondary" | "secondary-ghost" | "link";
+};
+
+const variants = {
+    'base': 'btn-base',
+    'base-ghost': 'btn-base-ghost',
+    'primary': 'btn-primary',
+    'primary-ghost': 'btn-primary-ghost',
+    'secondary': 'btn-secondary',
+    'secondary-ghost': 'btn-secondary-ghost',
+    'link': 'btn-link',
+};
+
+const { variant } = Astro.props;
+const styleString: string = variants[variant];
+---
+
+<button class={styleString}>
+    <slot />
+</button>

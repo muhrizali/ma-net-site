@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    /* COLORS */
+
+    --color-base-10: oklch(99% 0 0);
+    --color-base-20: oklch(94% 0 0);
+    --color-base-30: oklch(89% 0 0);
+    --color-base-40: oklch(50% 0 0);
+    --color-base-50: oklch(40% 0 0); 
+    --color-base-text: oklch(30% 0 0);
+
+    /* --color-primary-10: oklch(90% 0.233 277.117);
+    --color-primary-20: oklch(80% 0.233 277.117);
+    --color-primary-30: oklch(70% 0.233 277.117);
+    --color-primary-40: oklch(50% 0.233 277.117);
+    --color-primary-50: oklch(40% 0.233 277.117);
+    --color-primary-text: oklch(30% 0.233 277.117); */
+    /* oklch(28.2% 0.091 267.935) */
+    --color-primary-10: oklch(90% 0.091 267.935);
+    --color-primary-20: oklch(85% 0.091 267.935);
+    --color-primary-30: oklch(80% 0.091 267.935);
+    --color-primary-40: oklch(50% 0.091 267.935);
+    --color-primary-50: oklch(40% 0.091 267.935);
+    --color-primary-text: oklch(30% 0.091 267.935);
+    
+    /* --color-secondary-10: oklch(99% 0.233 130.85);
+    --color-secondary-20: oklch(92% 0.233 130.85);
+    --color-secondary-30: oklch(86% 0.233 130.85);
+    --color-secondary-40: oklch(50% 0.233 130.85);
+    --color-secondary-50: oklch(40% 0.233 130.85); */
+
+    --color-secondary-10: oklch(90% 0.076 70.697);
+    --color-secondary-20: oklch(85% 0.076 70.697);
+    --color-secondary-30: oklch(80% 0.076 70.697);
+    --color-secondary-40: oklch(50% 0.076 70.697);
+    --color-secondary-50: oklch(40% 0.076 70.697);
+    --color-secondary-text: oklch(30% 0.076 70.697);
+
+    --color-danger-10: oklch(100% 0.237 25.331);
+    --color-danger-20: oklch(90% 0.237 25.331);
+    --color-danger-30: oklch(80% 0.237 25.331);
+    --color-danger-40: oklch(50% 0.237 25.331);
+    --color-danger-50: oklch(40% 0.237 25.331);
+    --color-danger-text: oklch(30% 0.237 25.331);
+
+    --color-success-10: oklch(100% 0.219 149.579);
+    --color-success-20: oklch(90% 0.219 149.579);
+    --color-success-30: oklch(80% 0.219 149.579);
+    --color-success-40: oklch(50% 0.219 149.579);
+    --color-success-50: oklch(40% 0.219 149.579);
+    --color-success-text: oklch(30% 0.219 149.579);
+
+    /* FONTS */
+    --font-mono: "FiraCode Nerd Font", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: "Liberation Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: "Droid Serif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    
+    --font-plex-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", monospace;
+    --font-plex-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-plex-serif: "IBM Plex Serif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+;
+}
+
+body {
+    @apply bg-base-10;
+}
+/* Utilities: User Interface */
+
+@utility site-width {
+    @apply w-3/5;
+}
+
+@utility ui {
+    @apply font-mono font-medium text-lg rounded-xs select-none;
+}
+
+@utility btn {
+    @apply ui inline-block m-1 px-2 py-0.5 cursor-pointer active:translate-y-0.5;
+}
+@utility btn-ghost {
+    @apply btn bg-none border-2 border-transparent;
+}
+
+@utility btn-base {
+    @apply btn bg-base-30 bg-gradient-to-b from-base-20 border-2 border-base-30 hover:border-base-40 text-base-text;
+}
+
+@utility btn-base-ghost {
+    @apply btn-ghost hover:bg-base-30 bg-gradient-to-b hover:from-base-20 hover:border-2 hover:border-base-40 text-base-text;
+}
+
+@utility btn-primary {
+    @apply btn bg-primary-20 bg-gradient-to-b from-primary-10 border-2 border-primary-20 hover:border-primary-40 text-primary-text;
+}
+@utility btn-primary-ghost {
+    @apply btn-ghost hover:bg-primary-20 hover:bg-gradient-to-b hover:from-primary-10 hover:border-2 hover:border-primary-40 text-primary-text;
+}
+
+@utility btn-secondary {
+    @apply btn bg-secondary-20 bg-gradient-to-b from-secondary-10 border-2 border-secondary-20 hover:border-secondary-40 text-secondary-text;
+}
+@utility btn-secondary-ghost {
+    @apply btn-ghost hover:bg-secondary-20 hover:bg-gradient-to-b hover:from-secondary-10 hover:border-2 hover:border-secondary-40 text-secondary-text;
+}
+
+@utility btn-link {
+    @apply btn bg-base-10 text-primary-50 hover:underline;
+}
+
+@utility group-row {
+    @apply flex flex-row items-center gap-0;
+}
+
+@utility group-col {
+    @apply flex flex-col items-start gap-0;
+}
+
+@utility spacer {
+    @apply grow;
+}
+
+
+@utility section {
+    @apply ui m-0.5 p-4 h-fit text-base-50 bg-base-10 border-2 border-base-20;
+}
+
+
+/* HEADER */
+
+@utility header {
+    @apply ui p-0.5 mb-0.5 bg-primary-30 rounded-none border-2 border-primary-40;
+}
+@utility logo {
+    @apply ui font-bold m-0.5 px-4 py-1 bg-blue-950 text-2xl text-white/95;
+}
+@utility navigation {
+    @apply flex flex-row items-center gap-0 px-0 site-width mx-auto;
+}
+@utility navigation-links {
+    @apply m-0.5 flex flex-row items-center gap-0;
+}
+
+/* FORM INPUTS */
+@utility input {
+    @apply ui w-80 px-2 py-1 m-1 outline-solid;
+}
+
+@utility input-base {
+    @apply input text-base-50 placeholder:text-base-40 bg-base-10 selection:bg-base-30 outline-2 outline-base-40;
+}
+@utility input-primary {
+    @apply input text-primary-50 placeholder:text-primary-40 bg-primary-10/10 selection:bg-primary-10 outline-2 outline-primary-40;
+}
+@utility input-secondary {
+    @apply input text-secondary-50 placeholder:text-secondary-40 bg-secondary-10/10 selection:bg-secondary-10 outline-2 outline-secondary-40;
+}
+
+/* MAIN */
+
+@utility main {
+    @apply site-width mx-auto;
+}
+
+/* Utilities: Typography */
+@utility prose {
+    @apply font-plex-serif font-medium text-base-text text-shadow-base-30 text-shadow-none text-base/snug hyphens-auto wrap-break-word select-text selection:bg-primary-20/75 ;
+}
+
+.prose h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+}
+.prose h6, h5 {
+    @apply text-base/normal;
+}
+.prose h4 {
+    @apply text-xl/normal;
+}
+.prose h3 {
+    @apply text-2xl/relaxed;
+}
+.prose h2 {
+    @apply text-3xl/relaxed;
+}
+.prose h1 {
+    @apply text-4xl/relaxed;
+}
+
+.prose ol, ul {
+    @apply pl-4 mt-2;
+}
+.prose ol li {
+    @apply list-outside list-decimal;
+}
+.prose ul li {
+    @apply list-outside list-disc;
+}
+.prose blockquote {
+    @apply my-2 ml-0 pl-4 text-base-40 border-l-4 border-base-40;
+}
+.prose blockquote footer {
+    @apply text-right mt-1;
+}
+.prose blockquote cite {
+    @apply before:content-['\2014_'];
+}
+.prose hr {
+    @apply my-4 h-0.5 border-none bg-base-20;
+}
+.prose abbr {
+    /* @apply s */
+}
+.prose del {
+    @apply text-danger-text;
+}
+.prose ins {
+    @apply text-success-text no-underline;
+}
+.prose kbd {
+    @apply bg-base-20 border-1 border-base-40 text-base-50 px-1 rounded-xs;
+}
+/* .prose underline */
+

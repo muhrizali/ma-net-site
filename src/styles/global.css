@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -53,12 +53,15 @@
     --color-success-text: oklch(30% 0.219 149.579);
 
     /* FONTS */
-    --font-mono: "FiraCode Nerd Font", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-sans: "Liberation Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-serif: "Droid Serif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-mono: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
+    --font-serif: "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     
     --font-plex-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", monospace;
+
     --font-plex-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
     --font-plex-serif: "IBM Plex Serif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 ;
 }
@@ -73,11 +76,11 @@ body {
 }
 
 @utility ui {
-    @apply font-mono font-medium text-lg rounded-xs select-none;
+    @apply font-mono font-semibold text-lg rounded-xs select-none;
 }
 
 @utility btn {
-    @apply ui inline-block m-1 px-2 py-0.5 cursor-pointer active:translate-y-0.5;
+    @apply ui inline-block m-1 px-2 py-0 cursor-pointer active:translate-y-0.5;
 }
 @utility btn-ghost {
     @apply btn bg-none border-2 border-transparent;
@@ -121,30 +124,33 @@ body {
     @apply grow;
 }
 
+@utility bound-box {
+    @apply m-0.5 p-4 h-fit text-base-text bg-base-10 border-2 border-base-20;
+}
 
-@utility section {
-    @apply ui m-0.5 p-4 h-fit text-base-50 bg-base-10 border-2 border-base-20;
+@utility unbound-box {
+    @apply m-0.5 p-4 h-fit text-base-text bg-base-10 border-2 border-base-10;
 }
 
 
 /* HEADER */
 
 @utility header {
-    @apply ui p-0.5 mb-0.5 bg-primary-30 rounded-none border-2 border-primary-40;
+    @apply ui p-0 mb-0.5 bg-primary-30 rounded-none border-2 border-primary-40;
 }
 @utility logo {
-    @apply ui font-bold m-0.5 px-4 py-1 bg-blue-950 text-2xl text-white/95;
+    @apply ui font-semibold my-1 px-4 py-1 bg-blue-950 text-2xl text-white/100;
 }
 @utility navigation {
-    @apply flex flex-row items-center gap-0 px-0 site-width mx-auto;
+    @apply flex flex-row items-center gap-1 site-width mx-auto;
 }
 @utility navigation-links {
-    @apply m-0.5 flex flex-row items-center gap-0;
+    @apply flex flex-row gap-0;
 }
 
 /* FORM INPUTS */
 @utility input {
-    @apply ui w-80 px-2 py-1 m-1 outline-solid;
+    @apply ui w-70 px-2 py-0.5 m-1 outline-solid;
 }
 
 @utility input-base {
@@ -157,15 +163,15 @@ body {
     @apply input text-secondary-50 placeholder:text-secondary-40 bg-secondary-10/10 selection:bg-secondary-10 outline-2 outline-secondary-40;
 }
 
-/* MAIN */
+/* CONTAINER */
 
-@utility main {
+@utility container {
     @apply site-width mx-auto;
 }
 
 /* Utilities: Typography */
 @utility prose {
-    @apply font-plex-serif font-medium text-base-text text-shadow-base-30 text-shadow-none text-base/snug hyphens-auto wrap-break-word select-text selection:bg-primary-20/75 ;
+    @apply font-serif font-normal text-base-text text-shadow-base-30 text-shadow-none text-base/snug hyphens-auto wrap-break-word select-text selection:bg-primary-10;
 }
 
 .prose h1, h2, h3, h4, h5, h6 {
@@ -187,7 +193,7 @@ body {
     @apply text-4xl/relaxed;
 }
 
-.prose ol, ul {
+.prose ol, .prose ul {
     @apply pl-4 mt-2;
 }
 .prose ol li {
@@ -200,7 +206,7 @@ body {
     @apply my-2 ml-0 pl-4 text-base-40 border-l-4 border-base-40;
 }
 .prose blockquote footer {
-    @apply text-right mt-1;
+    @apply text-right mt-1 font-semibold;
 }
 .prose blockquote cite {
     @apply before:content-['\2014_'];
@@ -208,9 +214,8 @@ body {
 .prose hr {
     @apply my-4 h-0.5 border-none bg-base-20;
 }
-.prose abbr {
-    /* @apply s */
-}
+/* .prose abbr {
+} */
 .prose del {
     @apply text-danger-text;
 }

@@ -1,0 +1,10 @@
+---
+import Sidebar from "./Sidebar.astro";
+---
+
+<div class="container flex flex-row gap-0">
+    <main class="unbound-box flex flex-col gap-0 basis-3/4">
+        <slot />
+    </main>
+    <Sidebar />
+</div>

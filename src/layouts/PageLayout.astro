@@ -1,0 +1,15 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import TextContent from "../components/TextContent.astro";
+
+interface Props {
+    pageTitle: string;    
+}
+const { pageTitle } = Astro.props;
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <TextContent>
+        <slot />
+    </TextContent>
+</BaseLayout>

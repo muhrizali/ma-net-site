@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Main from "../../components/Global/Main.astro";
+import Sidebar from "../../components/Global/Sidebar.astro";
+
+import BlogOverview from "./BlogOverview.astro";
+import BooksOverview from "./BooksOverview.astro";
+import AboutMe from "./AboutMe.astro";
+import ProjectsOverview from "./ProjectsOverview.astro";
+import IntroStatus from "./IntroStatus.astro";
+---
+<BaseLayout>
+    <Main>
+        <IntroStatus />
+        <BlogOverview />
+        <ProjectsOverview />
+    </Main>
+    <Sidebar>
+        <BooksOverview />
+        <AboutMe />
+    </Sidebar>
+</BaseLayout>

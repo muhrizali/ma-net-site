@@ -2,17 +2,12 @@
 import BaseLayout from "./BaseLayout.astro";
 import Main from "../components/Global/Main.astro";
 import Sidebar from "../components/Global/Sidebar.astro";
-import TextContent from "../components/TextContent.astro";
-
-interface Props {
-    pageTitle: string;
-}
-const { pageTitle } = Astro.props;
+import SidebarItem from "../components/Global/SidebarItem.astro";
 ---
-
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout>
     <Main>
         <slot />
     </Main>
     <Sidebar />
+
 </BaseLayout>

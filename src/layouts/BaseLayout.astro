@@ -1,8 +1,8 @@
 ---
 import "../styles/global.css";
-import TopHeader from "../components/TopHeader.astro";
-import BottomFooter from "../components/BottomFooter.astro";
-import MainView from "../components/MainView.astro";
+import Header from "../components/Global/Header.astro";
+import Footer from "../components/Global/Footer.astro";
+import MainView from "../components/Global/MainView.astro";
 
 const { pageTitle } = Astro.props;
 ---
@@ -17,11 +17,11 @@ const { pageTitle } = Astro.props;
 	</head>
 	<body>
 		<div>
-			<TopHeader />
+			<Header />
 			<MainView>
 				<slot />
 			</MainView>
-			<BottomFooter />
+			<Footer />
 		</div>
 	</body>
 </html>

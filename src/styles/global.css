@@ -53,10 +53,10 @@
     --color-success-text: oklch(30% 0.219 149.579);
 
     /* FONTS */
-    --font-mono: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: "FiraCode Nerd Font", "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     
-    --font-serif: "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-serif: "Merriweather", "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     
     --font-plex-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", monospace;
 
@@ -76,7 +76,7 @@ body {
 }
 
 @utility ui {
-    @apply font-mono font-semibold text-lg rounded-xs select-none;
+    @apply font-mono font-medium text-lg rounded-xs select-none;
 }
 
 @utility btn {
@@ -125,11 +125,11 @@ body {
 }
 
 @utility bound-box {
-    @apply m-0.5 p-4 h-fit text-base-text bg-base-10 border-2 border-base-20;
+    @apply m-1 p-4 shadow-xs text-base-text bg-base-10 border-2 border-base-20;
 }
 
 @utility unbound-box {
-    @apply m-0.5 p-4 h-fit text-base-text bg-base-10 border-2 border-base-10;
+    @apply m-0.5 p-4 text-base-text bg-base-10 border-2 border-base-10;
 }
 
 
@@ -139,7 +139,7 @@ body {
     @apply ui p-0 mb-0.5 bg-primary-30 rounded-none border-2 border-primary-40;
 }
 @utility logo {
-    @apply ui font-semibold my-1 px-4 py-1 bg-blue-950 text-2xl text-white/100;
+    @apply ui font-bold my-1 px-4 py-1 bg-blue-950 text-2xl text-white/100;
 }
 @utility navigation {
     @apply flex flex-row items-center gap-1 site-width mx-auto;
@@ -171,13 +171,24 @@ body {
 
 /* Utilities: Typography */
 @utility prose {
-    @apply font-serif font-normal text-base-text text-shadow-base-30 text-shadow-none text-base/snug hyphens-auto wrap-break-word select-text selection:bg-primary-10;
+    @apply font-serif font-medium text-base-text text-shadow-base-30 text-shadow-none text-base/snug hyphens-auto wrap-break-word select-text selection:bg-primary-10;
 }
 
-.prose h1, h2, h3, h4, h5, h6 {
+.prose h1, 
+.prose h2, 
+.prose h3, 
+.prose h4, 
+.prose h5, 
+.prose h6 {
     @apply font-bold;
 }
-.prose h6, h5 {
+.prose small {
+    @apply text-sm/tight;
+}
+.prose h6 {
+    @apply text-base/normal;
+}
+.prose h5 {
     @apply text-base/normal;
 }
 .prose h4 {
@@ -192,8 +203,8 @@ body {
 .prose h1 {
     @apply text-4xl/relaxed;
 }
-
-.prose ol, .prose ul {
+.prose ol, 
+.prose ul {
     @apply pl-4 mt-2;
 }
 .prose ol li {
@@ -211,6 +222,12 @@ body {
 .prose blockquote cite {
     @apply before:content-['\2014_'];
 }
+.prose figure {
+    @apply p-1;
+}
+.prose figure figcaption {
+    @apply text-center text-base-40 text-sm/tight py-1 px-4;
+}
 .prose hr {
     @apply my-4 h-0.5 border-none bg-base-20;
 }
@@ -225,5 +242,7 @@ body {
 .prose kbd {
     @apply bg-base-20 border-1 border-base-40 text-base-50 px-1 rounded-xs;
 }
-/* .prose underline */
+.prose a {
+    @apply text-primary-40 underline;
+}
 

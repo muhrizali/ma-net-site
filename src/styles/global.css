@@ -124,6 +124,45 @@ body {
     @apply grow;
 }
 
+@utility card-util {
+    @apply rounded-xs border-2 bg-base-10;
+}
+
+@utility card-util-sm {
+    @apply m-1 p-2;
+}
+@utility card-util-base {
+    @apply mx-1 my-2 p-4;
+}
+@utility card-sm {
+    @apply card-util card-util-sm border-base-20 shadow-xs;
+}
+@utility ub-card-sm {
+    @apply card-util card-util-sm border-hidden;
+}
+@utility card-base {
+    @apply card-util card-util-base border-base-20 shadow-xs;
+}
+@utility ub-card-base {
+    @apply card-util card-util-base border-hidden;
+}
+
+@utility entry-box {
+    @apply flex flex-col gap-1 mt-4;
+}
+@utility entry {
+    @apply flex flex-row gap-1 border-2 border-base-20 p-1 rounded-xs shadow-xs;
+}
+@utility entry-sm {
+    @apply flex flex-row gap-0.5 border-2 border-base-20 p-0.5 rounded-xs shadow-xs;
+}
+@utility entry-img {
+    @apply min-w-30 h-20 bg-primary-30 rounded-xs;
+}
+@utility entry-img-book-sm {
+    @apply min-w-10 h-15 bg-primary-30 rounded-xs;
+}
+
 @utility bound-box {
     @apply m-1 p-4 shadow-xs text-base-text bg-base-10 border-2 border-base-20;
 }

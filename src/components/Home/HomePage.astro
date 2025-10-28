@@ -8,8 +8,10 @@ import BooksOverview from "./BooksOverview.astro";
 import AboutMe from "./AboutMe.astro";
 import ProjectsOverview from "./ProjectsOverview.astro";
 import IntroStatus from "./IntroStatus.astro";
+
+const pageTitle = "Home - MaNet"
 ---
-<BaseLayout>
+<BaseLayout pageTitle={pageTitle}>
     <Main>
         <IntroStatus />
         <BlogOverview />

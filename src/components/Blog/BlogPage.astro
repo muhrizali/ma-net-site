@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Main from "../../components/Global/Main.astro";
+import Sidebar from "../../components/Global/Sidebar.astro";
+import SidebarItem from "../Global/SidebarItem.astro";
+
+const pageTitle = "Home - MaNet"
+---
+<BaseLayout pageTitle={pageTitle}>
+    <Main>
+        <section class="ub-card-base">
+            <h1>Blog</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit a nam labore vitae possimus voluptatibus qui libero vero, reprehenderit laborum blanditiis quia mollitia, ratione fuga, animi nisi quis nobis aperiam.</p>
+        </section>
+    </Main>
+    <Sidebar>
+        <SidebarItem>
+            <h3>Blog</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, officiis nesciunt? Reprehenderit nulla incidunt inventore eum nisi consectetur cumque labore quisquam officiis iste? Quo exercitationem dolores commodi fugit tenetur debitis.</p>
+        </SidebarItem>
+        <SidebarItem>
+            <h3>Blog</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, officiis nesciunt? Reprehenderit nulla incidunt inventore eum nisi consectetur cumque labore quisquam officiis iste? Quo exercitationem dolores commodi fugit tenetur debitis.</p>
+        </SidebarItem>
+    </Sidebar>
+</BaseLayout>

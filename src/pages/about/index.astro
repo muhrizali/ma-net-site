@@ -1,8 +1,13 @@
 ---
-import PageLayout from "../../layouts/PageLayout.astro"
+import PageLayout from "../../layouts/PageLayout.astro";
+import Section from "../../components/Section.astro";
+
 const pageTitle = "About - MA(net)";
 ---
 
 <PageLayout pageTitle={pageTitle}>
-    <h1>About</h1>
+    <Section>
+        <h1>About</h1>
+        <p>Write about yourself and things you have done, your hobbies, your passion, your life, your nature and your intent for this site. Talk about why you have created this website and why did you spent so much time in it.</p>
+    </Section>
 </PageLayout>

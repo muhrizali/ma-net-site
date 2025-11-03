@@ -1,9 +1,9 @@
 ---
-import BlogLayout from "./BlogLayout.astro";
+import PageLayout from "./PageLayout.astro";
 const { frontmatter } = Astro.props;
 ---
-<BlogLayout>
+<PageLayout pageTitle="lol">
     <h1>{ frontmatter.title }</h1>
     <p>{ frontmatter.author }</p>
     <slot />
-</BlogLayout>
+</PageLayout>

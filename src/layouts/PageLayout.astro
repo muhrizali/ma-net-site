@@ -2,9 +2,9 @@
 import BaseLayout from "./BaseLayout.astro";
 import Main from "../components/Global/Main.astro";
 import Sidebar from "../components/Global/Sidebar.astro";
-import TextContent from "../components/TextContent.astro";
+import AboutMe from "../components/Home/AboutMe.astro";
 
-interface Props {
+type Props = {
     pageTitle: string;
 }
 const { pageTitle } = Astro.props;
@@ -14,5 +14,7 @@ const { pageTitle } = Astro.props;
     <Main>
         <slot />
     </Main>
-    <Sidebar />
+    <Sidebar>
+        <AboutMe/>
+    </Sidebar>
 </BaseLayout>

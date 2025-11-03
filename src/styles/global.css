@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -54,16 +55,10 @@
 
     /* FONTS */
     --font-mono: "FiraCode Nerd Font", "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
     --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     
-    --font-serif: "Merriweather", "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-    
-    --font-plex-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", monospace;
-
-    --font-plex-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    
-    --font-plex-serif: "IBM Plex Serif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-;
+    --font-serif: "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 body {
@@ -81,10 +76,10 @@ body {
 .base h4, 
 .base h5, 
 .base h6 {
-    @apply font-bold;
+    @apply font-normal;
 }
 .base small {
-    @apply text-sm/tight;
+    @apply text-base/tight;
 }
 .base h6 {
     @apply text-base/normal;
@@ -107,6 +102,9 @@ body {
 .base hr {
     @apply my-4 h-0.5 border-none bg-base-20;
 }
+@utility muted {
+    @apply text-base-40;
+}
 /* .base abbr {
 } */
 /* .base a {
@@ -120,7 +118,7 @@ body {
 }
 
 @utility ui {
-    @apply font-mono font-medium text-lg rounded-xs select-none;
+    @apply font-mono font-semibold text-lg rounded-xs select-none;
 }
 
 @utility btn {
@@ -253,7 +251,7 @@ body {
 
 /* Utilities: Typography */
 @utility prose {
-    @apply font-serif font-medium text-base-text text-shadow-base-30 text-shadow-none text-base/snug hyphens-auto wrap-break-word select-text selection:bg-primary-10;
+    @apply font-serif font-medium text-base-text text-shadow-base-30 text-shadow-none text-xl/snug hyphens-auto wrap-break-word select-text selection:bg-primary-10;
 }
 
 .prose h1, 
@@ -262,10 +260,10 @@ body {
 .prose h4, 
 .prose h5, 
 .prose h6 {
-    @apply font-bold;
+    @apply font-semibold;
 }
 .prose small {
-    @apply text-sm/tight;
+    @apply text-base/tight;
 }
 .prose h6 {
     @apply text-base/normal;
@@ -285,12 +283,12 @@ body {
 .prose h1 {
     @apply text-4xl/relaxed;
 }
-/* .prose p {
-    @apply pb-4;
-} */
+.prose p {
+    @apply mb-3 last:mb-0;
+}
 .prose ol, 
 .prose ul {
-    @apply pl-4 pt-2;
+    @apply ml-6 pt-2;
 }
 .prose ol li {
     @apply list-outside list-decimal;

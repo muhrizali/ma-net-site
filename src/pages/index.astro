@@ -10,7 +10,7 @@ import SectionOutlinedSmall from "../components/SectionOutlinedSmall.astro";
 import ArticleEntryContainer from "../components/ArticleEntryContainer.astro";
 import ArticleEntryContainerSmall from "../components/ArticleEntryContainerSmall.astro";
 
-const pageTitle = "Home - EMANANT";
+const pageTitle = "Home";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -26,36 +26,22 @@ const pageTitle = "Home - EMANANT";
         </Section>
         <SectionOutlined>
             <h2>BLOG 📑</h2>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Temporibus aspernatur provident laborum corrupti doloremque id
-                praesentium voluptatibus alias quae ex nisi, aliquid eius esse
-                excepturi soluta, non commodi totam nemo.
-            </p>
             <ArticleEntryContainer />
         </SectionOutlined>
         <SectionOutlined>
             <h2>PROJECTS 🛠️</h2>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Temporibus aspernatur provident laborum corrupti doloremque id
-                praesentium voluptatibus alias quae ex nisi, aliquid eius esse
-                excepturi soluta, non commodi totam nemo.
-            </p>
-
             <ArticleEntryContainer />
         </SectionOutlined>
     </Main>
     <Sidebar>
-        <SectionOutlinedSmall>
-                <h3>Books</h3>
-                <p>
-                    Write and list about the books I have read or is currently
-                    reading with little pictures on the left side and their
-                    descriptions on the right.
-                </p>
+        <SectionOutlined>
+                <h4>BOOKS</h4>
+                <small>
+                    <p>
+                    </p>
+                </small>
                 <ArticleEntryContainerSmall />
-        </SectionOutlinedSmall>
+        </SectionOutlined>
         <AboutMe />
     </Sidebar>
 </BaseLayout>

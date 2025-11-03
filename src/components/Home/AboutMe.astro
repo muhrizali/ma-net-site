@@ -1,11 +1,11 @@
 ---
+import SectionOutlined from "../SectionOutlined.astro";
 import SectionOutlinedSmall from "../SectionOutlinedSmall.astro";
 import Image from "astro/components/Image.astro";
 import profile from "../../images/profile.jpg";
 ---
 
-<SectionOutlinedSmall>
-    <h3>About</h3>
+<SectionOutlined>
     <figure>
         <Image
             alt="Author profile picture with colorful glasses"
@@ -18,10 +18,12 @@ import profile from "../../images/profile.jpg";
                 This was the best I looked from last 3 years
             </figcaption> -->
     </figure>
+    <small>
+        <p>
+            This section will be about me, who I am, what I do and most importantly
+            why I created this website. I will be talking about my interests and the
+            things that I am passionate about, both academically and personally.
+        </p>
+    </small>
 
-    <p>
-        This section will be about me, who I am, what I do and most importantly
-        why I created this website. I will be talking about my interests and the
-        things that I am passionate about, both academically and personally.
-    </p>
-</SectionOutlinedSmall>
+</SectionOutlined>

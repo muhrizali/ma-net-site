@@ -1,8 +1,22 @@
 ---
 import PageLayout from "../../layouts/PageLayout.astro"
-const pageTitle = "Projects - MA(net)";
+import Section from "../../components/Section.astro";
+import SectionOutlined from "../../components/SectionOutlined.astro";
+
+const pageTitle = "Projects";
 ---
 
 <PageLayout pageTitle={pageTitle}>
-    <h1>Projects</h1>
+    <Section>
+        <h1>Projects</h1>
+        <p>Things I created: Write about the software and libraries you like and passionate about. And all the projects you have been waiting eagerly for.</p>
+    </Section>
+    <SectionOutlined>
+        <h2>My Projects</h2>
+        <ul>
+            <li><a href="#">Project A</a></li>
+            <li><a href="#">Project B</a></li>
+            <li><a href="#">Project C</a></li>
+        </ul>
+    </SectionOutlined>
 </PageLayout>

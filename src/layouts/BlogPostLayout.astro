@@ -1,0 +1,9 @@
+---
+import BlogLayout from "./BlogLayout.astro";
+const { frontmatter } = Astro.props;
+---
+<BlogLayout>
+    <h1>{ frontmatter.title }</h1>
+    <p>{ frontmatter.author }</p>
+    <slot />
+</BlogLayout>

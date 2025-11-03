@@ -69,6 +69,50 @@
 body {
     @apply bg-base-10;
 }
+
+/* BASE Styles */
+@utility base {
+    @apply font-sans font-medium text-base-text text-shadow-base-30 text-shadow-none text-base/tight select-none;
+}
+
+.base h1, 
+.base h2, 
+.base h3, 
+.base h4, 
+.base h5, 
+.base h6 {
+    @apply font-bold;
+}
+.base small {
+    @apply text-sm/tight;
+}
+.base h6 {
+    @apply text-base/normal;
+}
+.base h5 {
+    @apply text-base/normal;
+}
+.base h4 {
+    @apply text-xl/normal;
+}
+.base h3 {
+    @apply text-2xl/relaxed;
+}
+.base h2 {
+    @apply text-3xl/relaxed;
+}
+.base h1 {
+    @apply text-4xl/relaxed;
+}
+.base hr {
+    @apply my-4 h-0.5 border-none bg-base-20;
+}
+/* .base abbr {
+} */
+/* .base a {
+    @apply text-primary-40 underline;
+} */
+
 /* Utilities: User Interface */
 
 @utility site-width {
@@ -124,40 +168,39 @@ body {
     @apply grow;
 }
 
-@utility card-util {
-    @apply rounded-xs border-2 bg-base-10;
+@utility section {
+    @apply rounded-xs border-2 bg-base-10 mx-1 my-2 p-4 border-hidden;
 }
-
-@utility card-util-sm {
-    @apply m-1 p-2;
+@utility section-small {
+    @apply rounded-xs border-2 bg-base-10 m-1 p-2 border-hidden;
 }
-@utility card-util-base {
-    @apply mx-1 my-2 p-4;
+@utility section-outlined {
+    @apply rounded-xs border-2 bg-base-10 mx-1 my-2 p-4 border-base-20 shadow-xs;
 }
-@utility card-sm {
-    @apply card-util card-util-sm border-base-20 shadow-xs;
-}
-@utility ub-card-sm {
-    @apply card-util card-util-sm border-hidden;
-}
-@utility card-base {
-    @apply card-util card-util-base border-base-20 shadow-xs;
-}
-@utility ub-card-base {
-    @apply card-util card-util-base border-hidden;
+@utility section-outlined-small {
+    @apply rounded-xs border-2 bg-base-10 m-1 p-2 border-base-20 shadow-xs;
 }
 
 @utility entry-box {
     @apply flex flex-col gap-1 mt-4;
 }
-@utility entry {
+@utility article-entry {
     @apply flex flex-row gap-1 border-2 border-base-20 p-1 rounded-xs shadow-xs;
 }
-@utility entry-sm {
+@utility article-entry-small {
     @apply flex flex-row gap-0.5 border-2 border-base-20 p-0.5 rounded-xs shadow-xs;
 }
-@utility entry-img {
+@utility article-entry-image {
     @apply min-w-30 h-20 bg-primary-30 rounded-xs;
+}
+@utility article-entry-image-small {
+    @apply min-w-15 size-15 bg-primary-30 rounded-xs;
+}
+@utility article-book-entry-image {
+    @apply min-w-20 h-30 bg-primary-30 rounded-xs;
+}
+@utility article-book-entry-image-small {
+    @apply min-w-10 h-15 bg-primary-30 rounded-xs;
 }
 @utility entry-img-book-sm {
     @apply min-w-10 h-15 bg-primary-30 rounded-xs;
@@ -242,9 +285,12 @@ body {
 .prose h1 {
     @apply text-4xl/relaxed;
 }
+/* .prose p {
+    @apply pb-4;
+} */
 .prose ol, 
 .prose ul {
-    @apply pl-4 mt-2;
+    @apply pl-4 pt-2;
 }
 .prose ol li {
     @apply list-outside list-decimal;
@@ -284,4 +330,6 @@ body {
 .prose a {
     @apply text-primary-40 underline;
 }
+
+
 

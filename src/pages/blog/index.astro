@@ -1,5 +1,24 @@
 ---
-import BlogPage from "../../components/Blog/BlogPage.astro";
----
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import { getCollection } from "astro:content";
 
-<BlogPage />
+const posts = await getCollection('blogPosts');
+---
+<BlogLayout>
+    <h1>Blog Yo</h1>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit a nam
+        labore vitae possimus voluptatibus qui libero vero, reprehenderit
+        laborum blanditiis quia mollitia, ratione fuga, animi nisi quis nobis
+        aperiam.
+    </p>
+    <p>This is good</p>
+    <h3>Collection</h3>
+    <ul>
+        {
+            posts.map((post) => (
+                <li><a href={`/blog/posts/${post.id}`}>{post.data.title}</a></li>
+            ))
+        }
+    </ul>
+</BlogLayout>

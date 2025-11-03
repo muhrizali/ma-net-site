@@ -1,4 +1,61 @@
 ---
-import HomePage from "../components/Home/HomePage.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Main from "../components/Global/Main.astro";
+import Sidebar from "../components/Global/Sidebar.astro";
+import AboutMe from "../components/Home/AboutMe.astro";
+import Section from "../components/Section.astro";
+import SectionOutlined from "../components/SectionOutlined.astro";
+import SectionOutlinedSmall from "../components/SectionOutlinedSmall.astro";
+import ArticleEntryContainer from "../components/ArticleEntryContainer.astro";
+import ArticleEntryContainerSmall from "../components/ArticleEntryContainerSmall.astro";
+
+const pageTitle = "Home - EMANANT";
 ---
-<HomePage />
+
+<BaseLayout pageTitle={pageTitle}>
+    <Main>
+        <Section>
+            <h1>Hello, I am Muhriz</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Temporibus aspernatur provident laborum corrupti doloremque id
+                praesentium voluptatibus alias quae ex nisi, aliquid eius esse
+                excepturi soluta, non commodi totam nemo.
+            </p>
+        </Section>
+        <SectionOutlined>
+            <h2>BLOG 📑</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Temporibus aspernatur provident laborum corrupti doloremque id
+                praesentium voluptatibus alias quae ex nisi, aliquid eius esse
+                excepturi soluta, non commodi totam nemo.
+            </p>
+            <ArticleEntryContainer />
+        </SectionOutlined>
+        <SectionOutlined>
+            <h2>PROJECTS 🛠️</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Temporibus aspernatur provident laborum corrupti doloremque id
+                praesentium voluptatibus alias quae ex nisi, aliquid eius esse
+                excepturi soluta, non commodi totam nemo.
+            </p>
+
+            <ArticleEntryContainer />
+        </SectionOutlined>
+    </Main>
+    <Sidebar>
+        <SectionOutlinedSmall>
+                <h3>Books</h3>
+                <p>
+                    Write and list about the books I have read or is currently
+                    reading with little pictures on the left side and their
+                    descriptions on the right.
+                </p>
+                <ArticleEntryContainerSmall />
+        </SectionOutlinedSmall>
+        <AboutMe />
+    </Sidebar>
+</BaseLayout>

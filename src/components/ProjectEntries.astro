@@ -1,0 +1,33 @@
+---
+import ArticleEntry from "./ArticleEntry.astro";
+import ArticleEntryContainer from "./ArticleEntryContainer.astro";
+import { getCollection } from "astro:content";
+
+interface Props {
+    limit: number;
+}
+
+const { limit } = Astro.props;
+let projects = [];
+
+if (limit === 0) {
+    projects = await getCollection("projectPosts");
+} else {
+    projects = (await getCollection("projectPosts")).slice(0, limit)
+}
+---
+
+<ArticleEntryContainer>
+    {
+        projects.map((project) => (
+            <li>
+                <ArticleEntry link={`/projects/${project.id}`} title={project.data.title}>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. In
+                    nobis mollitia ad blanditiis itaque cum, quaerat quasi ipsum
+                    libero quia, quibusdam architecto dolore omnis temporibus
+                    molestias, inventore exercitationem unde vitae?
+                </ArticleEntry>
+            </li>
+        ))
+    }
+</ArticleEntryContainer>

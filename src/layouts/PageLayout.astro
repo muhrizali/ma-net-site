@@ -1,8 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import Main from "../components/Global/Main.astro";
-import Sidebar from "../components/Global/Sidebar.astro";
-import AboutMe from "../components/Home/AboutMe.astro";
 
 type Props = {
     pageTitle: string;
@@ -14,7 +12,4 @@ const { pageTitle } = Astro.props;
     <Main>
         <slot />
     </Main>
-    <Sidebar>
-        <AboutMe/>
-    </Sidebar>
 </BaseLayout>

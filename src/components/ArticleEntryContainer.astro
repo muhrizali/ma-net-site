@@ -4,8 +4,30 @@ import ArticleEntry from "./ArticleEntry.astro";
 // pass it to the entry components
 ---
 
-<div class="flex flex-col gap-1 mt-4">
-    <ArticleEntry />
-    <ArticleEntry />
-    <ArticleEntry />
-</div>
+<ul class="flex flex-col gap-1 mt-4">
+    <!-- <li>
+        <ArticleEntry title="Something" link="#">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, non
+            dolor! Obcaecati voluptatem, rem ullam ut vitae ipsa, mollitia
+            repudiandae cupiditate aperiam animi maxime similique repellat.
+            Ipsum nam iure natus!
+        </ArticleEntry>
+    </li>
+    <li>
+        <ArticleEntry title="Something" link="#">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, non
+            dolor! Obcaecati voluptatem, rem ullam ut vitae ipsa, mollitia
+            repudiandae cupiditate aperiam animi maxime similique repellat.
+            Ipsum nam iure natus!
+        </ArticleEntry>
+    </li>
+    <li>
+        <ArticleEntry title="Something" link="#">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, non
+            dolor! Obcaecati voluptatem, rem ullam ut vitae ipsa, mollitia
+            repudiandae cupiditate aperiam animi maxime similique repellat.
+            Ipsum nam iure natus!
+        </ArticleEntry>
+    </li> -->
+    <slot />
+</ul>

@@ -2,13 +2,10 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import Main from "../components/Global/Main.astro";
-import Sidebar from "../components/Global/Sidebar.astro";
-import AboutMe from "../components/Home/AboutMe.astro";
 import Section from "../components/Section.astro";
-import SectionOutlined from "../components/SectionOutlined.astro";
-import SectionOutlinedSmall from "../components/SectionOutlinedSmall.astro";
-import ArticleEntryContainer from "../components/ArticleEntryContainer.astro";
-import ArticleEntryContainerSmall from "../components/ArticleEntryContainerSmall.astro";
+import BlogEntries from "../components/BlogEntries.astro";
+import BookEntries from "../components/BookEntries.astro";
+import ProjectEntries from "../components/ProjectEntries.astro";
 
 const pageTitle = "Home";
 ---
@@ -16,7 +13,7 @@ const pageTitle = "Home";
 <BaseLayout pageTitle={pageTitle}>
     <Main>
         <Section>
-            <h1>Hello, I am Muhriz</h1>
+            <h1>hello</h1>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Temporibus aspernatur provident laborum corrupti doloremque id
@@ -24,24 +21,17 @@ const pageTitle = "Home";
                 excepturi soluta, non commodi totam nemo.
             </p>
         </Section>
-        <SectionOutlined>
-            <h2>BLOG 📑</h2>
-            <ArticleEntryContainer />
-        </SectionOutlined>
-        <SectionOutlined>
-            <h2>PROJECTS 🛠️</h2>
-            <ArticleEntryContainer />
-        </SectionOutlined>
+        <Section>
+            <h2>Recent Blog</h2>
+            <BlogEntries limit={3} />
+        </Section>
+        <Section>
+            <h2>Recent Projects</h2>
+            <ProjectEntries limit={3} />
+        </Section>
+        <Section>
+            <h2>Recent Readings</h2>
+            <BookEntries limit={3} />
+        </Section>
     </Main>
-    <Sidebar>
-        <SectionOutlined>
-                <h4>BOOKS</h4>
-                <small>
-                    <p>
-                    </p>
-                </small>
-                <ArticleEntryContainerSmall />
-        </SectionOutlined>
-        <AboutMe />
-    </Sidebar>
 </BaseLayout>

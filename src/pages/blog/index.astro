@@ -2,33 +2,18 @@
 import PageLayout from "../../layouts/PageLayout.astro";
 import Section from "../../components/Section.astro";
 import SectionOutlined from "../../components/SectionOutlined.astro";
-import { getCollection } from "astro:content";
-
-const posts = await getCollection('blogPosts');
+import BlogEntries from "../../components/BlogEntries.astro";
 const pageTitle = "Blog";
 ---
 <PageLayout pageTitle={pageTitle}>
     <Section>
-        <p class="text-3xl">
-            I like to write about topics which interests me.
-            I like to write about topics which interests me.
-        </p>
         <p>I am trying to get better at writing and I can say this is happening gradually but slowly.</p>
     </Section>
-    <SectionOutlined>
+    <Section>
         <h2>Posts</h2>
-        <ul>
-            {
-                posts.map((post) => (
-                    <li>
-                        <a href={`/blog/posts/${post.id}`}>
-                            {post.data.title}
-                        </a>
-                    </li>
-                ))
-            }
-        </ul>
-    </SectionOutlined>
+
+        <BlogEntries limit={0} />
+    </Section>
     <SectionOutlined>
         <h2>Mini Blog</h2>
     </SectionOutlined>

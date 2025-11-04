@@ -16,14 +16,14 @@ const navLinks: NavLinks = [
 ];
 ---
 
-<header class="header">
-    <nav class="navigation">
+<header class="ui p-0 mb-0.5 bg-base-30 rounded-none border-y-2 border-base-40">
+    <nav class="flex flex-col items-center gap-0 site-width mx-auto">
         <Logo />
-        <ul class="navigation-links">
+        <ul class="flex flex-row gap-0">
             {
                 navLinks.map((item) => (
                     <li>
-                        <a class="btn-primary-ghost" href={item.link}>
+                        <a class="btn-base-ghost" href={item.link}>
                             {item.label}
                         </a>
                     </li>
@@ -32,7 +32,7 @@ const navLinks: NavLinks = [
         </ul>
         <div class="grow"></div>
         <!-- <ul> -->
-        <input class="input-base" placeholder="SEARCH" type="text" />
+        <!-- <input class="input-base" placeholder="SEARCH" type="text" /> -->
     </nav>
     <!-- </ul> -->
 </header>

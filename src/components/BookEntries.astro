@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ArticleBookEntry from "./ArticleBookEntry.astro";
+import ArticleEntryContainer from "./ArticleEntryContainer.astro";
+import { getCollection } from "astro:content";
+
+interface Props {
+    limit: number;
+}
+
+const { limit } = Astro.props;
+let books = [];
+
+if (limit === 0) {
+    books = await getCollection("bookPosts");
+} else {
+    books = (await getCollection("bookPosts")).slice(0, limit)
+}
+---
+
+<ArticleEntryContainer>
+    {
+        books.map((book) => (
+            <li>
+                <ArticleBookEntry link={`/books/${book.id}`} title={book.data.title}>
+                    The
+                    {book.data.description}
+                </ArticleBookEntry>
+            </li>
+        ))
+    }
+</ArticleEntryContainer>

@@ -25,9 +25,9 @@ const bookPosts = defineCollection({
         description: z.string(),
         dateTimeAdded: z.string().transform((dateTimeAddedString) => new Date(dateTimeAddedString)),
         dateTimeEdited: z.string().transform((dateTimeEditedString) => new Date(dateTimeEditedString)),
+        isDraft: z.boolean(),
         goodreadsLink: z.string(),
         coverLink: z.string(),
-
     })
 });
 

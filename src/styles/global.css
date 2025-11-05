@@ -111,7 +111,7 @@ h1 {
 
 
 @utility prose {
-    @apply font-mono font-normal text-base-text text-shadow-base-30 text-shadow-none text-xl/tight hyphens-auto wrap-break-word select-text selection:bg-primary-10;
+    @apply font-serif font-normal text-base-text text-shadow-base-30 text-shadow-none text-xl/tight hyphens-auto wrap-break-word select-text selection:bg-primary-10;
 }
 
 .prose h1, 

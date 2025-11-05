@@ -3,11 +3,12 @@ layout: "../../../layouts/BookMDLayout.astro"
 
 # COMMONS
 title: "The Hunger Games"
-authors: ["Author 1", "Author 2"]
+authors: ["Suzanne Collins", "Patrick Rothfuss"]
 tags: ["tagA", "tagB", "tagC"]
-description: "Short description or synopsis of the book"
+description: "The Hunger Games is a series of young adult dystopian novels written by American author Suzanne Collins. The series consists of a trilogy that follows teenage protagonist Katniss Everdeen, and two prequels."
 dateTimeAdded: "2011-10-10T14:48:00"
 dateTimeEdited: "2011-11-10T14:48:00"
+isDraft: true
 
 # BOOK
 goodreadsLink: "https://www.goodreads.com/book/show/2767052-the-hunger-games"

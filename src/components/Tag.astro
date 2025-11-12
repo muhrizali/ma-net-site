@@ -1,0 +1,9 @@
+---
+const { link } = Astro.props;
+---
+
+<a
+    href={link}
+    class="inline-block mr-2 font-sans font-bold tracking-tight uppercase bg-gradient-to-b from-base-40 to-base-50 text-base-10 rounded-xs px-2 py-0 text-sm border-1 border-base-50">
+    <slot />
+</a>

@@ -1,5 +1,5 @@
 ---
-import PageLayout from "../../layouts/PageLayout.astro"
+import PageLayout from "../../layouts/PageLayout.astro";
 import Section from "../../components/Section.astro";
 import SectionOutlined from "../../components/SectionOutlined.astro";
 import ProjectEntries from "../../components/ProjectEntries.astro";
@@ -10,10 +10,14 @@ const pageTitle = "Projects";
 <PageLayout pageTitle={pageTitle}>
     <Section>
         <h1>Projects</h1>
-        <p>Things I created: Write about the software and libraries you like and passionate about. And all the projects you have been waiting eagerly for.</p>
+        <p>
+            Things I created: Write about the software and libraries you like
+            and passionate about. And all the projects you have been waiting
+            eagerly for.
+        </p>
+        <p>This is a link to a <a href="#" class="text-primary-40 hover:underline">Book</a></p>
     </Section>
     <Section>
-        <h2>My Projects</h2>
         <ProjectEntries limit={0} />
     </Section>
 </PageLayout>

@@ -1,52 +1,14 @@
 ---
 import PageLayout from "./PageLayout.astro";
 import Section from "../components/Section.astro";
-import SectionOutlined from "../components/SectionOutlined.astro";
-import { Image } from "astro:assets";
+import BookMDBanner from "../components/BookMDBanner.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
 <PageLayout pageTitle={frontmatter.title}>
     <Section>
-        <div class="flex flex-row gap-0 prose">
-            <figure>
-                <a href={frontmatter.goodreadsLink} target="_blank">
-                    <Image
-                        src={frontmatter.coverLink}
-                        alt={`Cover image for the book ${frontmatter.title}`}
-                        width={1200}
-                        height={100}
-                        class="basis-1 min-w-72 w-72 aspect-3/4 rounded-xs border-2 border-base-text opacity-90"
-                    />
-                </a>
-                <figcaption>
-                    Cover image for the book <br /><b
-                        ><i>{frontmatter.title}</i></b
-                    >
-                </figcaption>
-            </figure>
-            <div class="prose px-4 py-1">
-                {
-                    frontmatter.tags.map((tag: string) => (
-                        <span class="inline-block mr-2 font-mono font-normal uppercase bg-gradient-to-b from-base-20 to-base-30 bg-base-30 rounded-xs px-2 text-base border-2 border-base-30">
-                            🏷️{tag}
-                        </span>
-                    ))
-                }
-                <hgroup class="mb-6">
-                    <h2>
-                        <i>{frontmatter.title}</i>
-                    </h2>
-                    <h5>
-                        {frontmatter.authors.join(", ")}
-                    </h5>
-                    <!-- <small class="font-medium"> Suzanne Collins </small> -->
-                </hgroup>
-
-                <p>{frontmatter.description}</p>
-            </div>
-        </div>
+        <BookMDBanner frontmatter={frontmatter} />
     </Section>
     <Section>
         <div class="prose">

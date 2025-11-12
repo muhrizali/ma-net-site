@@ -22,10 +22,7 @@ if (limit === 0) {
         posts.map((post) => (
             <li>
                 <ArticleEntry link={`/blog/${post.id}`} title={post.data.title}>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. In
-                    nobis mollitia ad blanditiis itaque cum, quaerat quasi ipsum
-                    libero quia, quibusdam architecto dolore omnis temporibus
-                    molestias, inventore exercitationem unde vitae?
+                    {post.data.description}
                 </ArticleEntry>
             </li>
         ))

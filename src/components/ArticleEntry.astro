@@ -6,11 +6,11 @@ interface Props {
 const { title, link } = Astro.props;
 ---
 <a href={link}>
-    <article class="flex flex-row gap-1 border-2 border-base-20 p-1 rounded-xs shadow-xs">
-        <div id="image-banner" class="min-w-30 h-20 bg-primary-30 rounded-xs"></div>
-        <div class="grow px-2 py-1 h-20">
+    <article class="group flex flex-row gap-1 border-2 border-base-20 hover:border-base-30 p-1 rounded-xs shadow-xs">
+        <div id="side-style-bar" class="min-w-2 w-2 h-20 bg-base-30 group-hover:bg-primary-30 rounded-xs"></div>
+        <div class="grow px-4 py-1 h-20">
             <h5>{title}</h5>
-            <small class="text-base-40 line-clamp-2">
+            <small class="text-base-40 line-clamp-3">
                 <p>
                     <slot />
                 </p>

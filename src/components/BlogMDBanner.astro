@@ -1,0 +1,23 @@
+---
+import Tag from "./Tag.astro";
+// import { DateTime } from "luxon";
+// import { Image } from "astro:assets";
+
+const { frontmatter } = Astro.props;
+const dateTimeAdded = new Date(frontmatter.dateTimeAdded);
+// const dateTimeEdited = new Date(frontmatter.dateTimeEdited);
+
+---
+
+<section class="">
+    <div class="mb-2">
+        {frontmatter.tags.map((tag: string) => <Tag link="#">{tag}</Tag>)}
+    </div>
+    <h1>{frontmatter.title}</h1>
+
+    <div class="font-mono mt-3 font-medium leading-5 text-base-40/80">
+        <small>Written by: {frontmatter.authors.join(", ")}</small><br />
+        <small>{dateTimeAdded.toDateString()} | {dateTimeAdded.toLocaleTimeString()}</small><br>
+    </div>
+    <p class="mt-6 text-3xl/tight text-base-50 font-medium">{frontmatter.description}</p>
+</section>

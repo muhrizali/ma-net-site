@@ -10,9 +10,8 @@ dateTimeAdded: "2011-10-10T14:48:00"
 dateTimeEdited: "2011-11-10T14:48:00"
 isDraft: true
 
-# BOOK
-goodreadsLink: "https://www.goodreads.com/book/show/2767052-the-hunger-games"
-coverLink: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1337857474i/7723926.jpg"
+# BLOG
+bannerLink: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1337857474i/7723926.jpg"
 
 ---
 

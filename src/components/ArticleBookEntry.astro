@@ -1,18 +1,21 @@
 ---
+import Image from 'astro/components/Image.astro';
 interface Props {
     title: string;
     link: string;
+    image: string;
 }
 
-const {link, title} = Astro.props;
+const {link, title, image} = Astro.props;
 ---
 <a href={link}>
     <article
-        class="flex flex-row gap-1 border-2 border-base-20 p-1 rounded-xs shadow-xs">
-        <div id="image-banner" class="min-w-20 h-30 bg-primary-30 rounded-xs"></div>
+        class="flex flex-row gap-1 border-2 border-base-20 hover:border-base-30 p-1 rounded-xs shadow-xs">
+        <!-- <div id="image-banner" class="min-w-20 h-30 bg-base-30 rounded-xs"></div> -->
+        <Image src={image} alt={title} width={80} height={120} class="min-w-20 h-30 bg-base-30 rounded-xs border-2 border-base-30" />
         <div class="grow px-2 py-1 h-20">
-            <h5>{title}</h5>
-            <small class="text-base-40 line-clamp-3 font-mono">
+            <h5 class="m-0">{title}</h5>
+            <small class="text-base-40 line-clamp-3">
                 <p>
                     <slot />
                 </p>

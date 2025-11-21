@@ -3,17 +3,18 @@ import PageLayout from "../../layouts/PageLayout.astro";
 import Section from "../../components/Section.astro";
 import SectionOutlined from "../../components/SectionOutlined.astro";
 import BookEntries from "../../components/BookEntries.astro";
+import {Content as BookPage} from './main.md';
 
 const pageTitle = "Books";
 ---
 
 <PageLayout pageTitle={pageTitle}>
     <Section>
-        <h1>Books</h1>
-        <p>Write about the books you have read, your favorite books and the books that have changed the way you think and carry on with your life.</p>
+        <div class="prose">
+            <BookPage />
+        </div>
     </Section>
     <Section>
-        <h2>My Books</h2>
         <BookEntries limit={0} />
     </Section>
 </PageLayout>

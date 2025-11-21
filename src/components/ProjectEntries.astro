@@ -15,6 +15,8 @@ if (limit === 0) {
 } else {
     projects = (await getCollection("projectPosts")).slice(0, limit)
 }
+
+projects = projects.filter((project) => !project.data.isDraft);
 ---
 
 <ArticleEntryContainer>

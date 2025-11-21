@@ -184,7 +184,7 @@ h1 {
     @apply bg-base-20 border-1 border-base-40 text-base-50 px-1 rounded-xs;
 }
 .prose a {
-    @apply text-primary-40 underline;
+    @apply text-primary-40 no-underline hover:underline decoration-2;
 }
 
 @utility site-width {

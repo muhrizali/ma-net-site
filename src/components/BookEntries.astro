@@ -16,6 +16,8 @@ if (limit === 0) {
 } else {
     books = (await getCollection("bookPosts")).slice(0, limit)
 }
+
+books = books.filter((book) => !book.data.isDraft);
 ---
 
 <ArticleEntryContainer>

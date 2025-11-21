@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 import Main from "../components/Global/Main.astro";
 import Section from "../components/Section.astro";
+import SectionOutlined from "../components/SectionOutlined.astro";
 import BlogEntries from "../components/BlogEntries.astro";
 import BookEntries from "../components/BookEntries.astro";
 import ProjectEntries from "../components/ProjectEntries.astro";
@@ -21,17 +22,17 @@ const pageTitle = "Home";
                 excepturi soluta, non commodi totam nemo.
             </p>
         </Section>
-        <Section>
-            <h2>Recent Blog</h2>
+        <SectionOutlined>
+            <h2>Blog</h2>
             <BlogEntries limit={3} />
-        </Section>
-        <Section>
-            <h2>Recent Projects</h2>
+        </SectionOutlined>
+        <SectionOutlined>
+            <h2>Projects</h2>
             <ProjectEntries limit={3} />
-        </Section>
-        <Section>
-            <h2>Recent Readings</h2>
+        </SectionOutlined>
+        <SectionOutlined>
+            <h2>Books</h2>
             <BookEntries limit={3} />
-        </Section>
+        </SectionOutlined>
     </Main>
 </BaseLayout>

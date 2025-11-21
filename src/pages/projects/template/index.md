@@ -8,7 +8,7 @@ tags: ["tagA", "tagB", "tagC", "tagD"]
 description: "Short description for the project"
 dateTimeAdded: "2011-10-10T14:48:00"
 dateTimeEdited: "2011-11-10T14:48:00"
-isDraft: true
+isDraft: false
 
 # PROJECT
 # langsUsed: ["Language A", "Language B"]

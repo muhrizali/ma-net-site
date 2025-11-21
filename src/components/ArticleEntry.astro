@@ -8,10 +8,10 @@ const { title, link } = Astro.props;
 <a href={link}>
     <article class="group flex flex-row gap-1 border-2 border-base-20 hover:border-base-30 p-1 rounded-xs shadow-xs">
         <div id="side-style-bar" class="min-w-2 w-2 h-20 bg-base-30 group-hover:bg-primary-30 rounded-xs"></div>
-        <div class="grow px-4 py-1 h-20">
+        <div class="grow px-4 py-1 h-fit">
             <h5>{title}</h5>
-            <small class="text-base-40 line-clamp-3">
-                <p>
+            <small>
+                <p class="text-base-40 line-clamp-2">
                     <slot />
                 </p>
             </small>

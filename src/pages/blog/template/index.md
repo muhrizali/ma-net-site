@@ -8,14 +8,14 @@ tags: ["tagA", "tagB", "tagC"]
 description: "Brief and accurate description of the blog post, talking about the things that you mentioned in blog post."
 dateTimeAdded: "2011-10-10T14:48:00"
 dateTimeEdited: "2011-11-10T14:48:00"
-isDraft: true
+isDraft: false
 
 # BLOG
-bannerLink: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1337857474i/7723926.jpg"
+# bannerLink: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1337857474i/7723926.jpg"
 
 ---
 
-## Post-3
+## Everyone
 
 This is a markdown post for my website. And this is turning out to be really well. Even better than I expected. But I am feeling very empty inside.
 

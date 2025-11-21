@@ -3,18 +3,19 @@ import PageLayout from "../../layouts/PageLayout.astro";
 import Section from "../../components/Section.astro";
 import SectionOutlined from "../../components/SectionOutlined.astro";
 import BlogEntries from "../../components/BlogEntries.astro";
+
+import {Content as BlogPage} from './main.md';
+
 const pageTitle = "Blog";
 ---
+
 <PageLayout pageTitle={pageTitle}>
     <Section>
-        <p>I am trying to get better at writing and I can say this is happening gradually but slowly.</p>
+        <div class="prose">
+            <BlogPage/>
+        </div>
     </Section>
     <Section>
-        <h2>Posts</h2>
-
         <BlogEntries limit={0} />
     </Section>
-    <SectionOutlined>
-        <h2>Mini Blog</h2>
-    </SectionOutlined>
 </PageLayout>

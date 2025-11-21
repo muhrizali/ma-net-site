@@ -20,7 +20,7 @@ const blogPosts = defineCollection({
         isDraft: z.boolean(),
 
         // BLOG
-        bannerLink: z.string(),
+        // bannerLink: z.string(),
     })
 });
 
